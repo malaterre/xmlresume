@@ -1,10 +1,12 @@
 Source: xml-resume-library
 Section: text
 Priority: optional
-Maintainer: Sandro Tosi <matrixhasu@gmail.com>
+Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Uploaders: Mathieu Malaterre <mathieu.malaterre@gmail.com>, Sandro Tosi <matrixhasu@gmail.com>
+DM-Upload-Allowed: yes
 Build-Depends-Indep: w3m, sgml-data
-Build-Depends: cdbs, debhelper (>= 5.0.0)
-Standards-Version: 3.7.3
+Build-Depends: quilt, debhelper (>= 5.0.0), ant
+Standards-Version: 3.9.1
 Homepage: http://xmlresume.sourceforge.net
 
 Package: xml-resume-library

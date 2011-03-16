@@ -1,3 +1,11 @@
+xml-resume-library (1.5.1-10) unstable; urgency=low
+
+  * Switch to dpkg-source 3.0 (quilt) format
+  * Bump Standard Version to 3.9.1
+  * Added myself as Uploaders
+
+ -- Mathieu Malaterre <mathieu.malaterre@gmail.com>  Wed, 16 Mar 2011 17:48:31 +0100
+
 xml-resume-library (1.5.1-9) unstable; urgency=low
 
   * debian/control

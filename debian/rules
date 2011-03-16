@@ -1,23 +1,23 @@
 #!/usr/bin/make -f
-# -*- mode: makefile; coding: utf-8 -*-
-# Copyright © 2002,2003 Colin Walters <walters@debian.org>
 
-include /usr/share/cdbs/1/rules/buildcore.mk
-include /usr/share/cdbs/1/rules/debhelper.mk
-include /usr/share/cdbs/1/rules/simple-patchsys.mk
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
 
-binary-post-install/xml-resume-library::
-	find debian/xml-resume-library/usr/share/sgml/xml-resume-library/ -name '*.sh' -exec chmod a+x {} \;
-	 # workaround because dh_install doesn't allow renaming files
-	mkdir -p debian/xml-resume-library/usr/share/sgml/xml-resume-library/dtd
-	cp dtd/catalog debian/xml-resume-library/usr/share/sgml/xml-resume-library/dtd/resume.cat
-	 # rework upstream documentation
-# Commented out to close 205956
-#	cd debian/xml-resume-library/usr/share/java && \
-#	  ln -s xmlresume-filter-1.5.1.jar xmlresume-filter.jar
-	(cd debian/xml-resume-library/usr/share/doc/xml-resume-library; \
-		ln -s html/changelog/index.html changelog.html; \
-		w3m -dump changelog.html | gzip -9 > changelog.gz; rm changelog.html )
+%:
+	dh --with quilt $@
+
+#binary-post-install/xml-resume-library::
+#	find debian/xml-resume-library/usr/share/sgml/xml-resume-library/ -name '*.sh' -exec chmod a+x {} \;
+#	 # workaround because dh_install doesn't allow renaming files
+#	mkdir -p debian/xml-resume-library/usr/share/sgml/xml-resume-library/dtd
+#	cp dtd/catalog debian/xml-resume-library/usr/share/sgml/xml-resume-library/dtd/resume.cat
+#	 # rework upstream documentation
+## Commented out to close 205956
+##	cd debian/xml-resume-library/usr/share/java && \
+##	  ln -s xmlresume-filter-1.5.1.jar xmlresume-filter.jar
+#	(cd debian/xml-resume-library/usr/share/doc/xml-resume-library; \
+#		ln -s html/changelog/index.html changelog.html; \
+#		w3m -dump changelog.html | gzip -9 > changelog.gz; rm changelog.html )
 
 get-orig-source:
 	#uscan --verbose --force-download --repack

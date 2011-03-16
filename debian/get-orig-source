@@ -19,7 +19,7 @@ if [ -z ${TARFILE}]; then
 TARFILE=${PACKAGE}_${VERSION}.orig.tar.gz
 fi
 
-svn export --quiet https://xmlresume.svn.sourceforge.net/svnroot/xmlresume/tags/release-${UVERSION} ${FOLDER}
+svn export --quiet https://xmlresume.svn.sourceforge.net/svnroot/xmlresume/tags/release-${UVERSION}/resume ${FOLDER}
 
 GZIP="--best --no-name" tar czf ${TARFILE} ${FOLDER}
 rm -rf ${FOLDER}
