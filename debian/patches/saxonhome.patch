@@ -1,0 +1,13 @@
+Index: xml-resume-library-1.5.1/build.xml
+===================================================================
+--- xml-resume-library-1.5.1.orig/build.xml	2011-03-16 18:38:49.000000000 +0100
++++ xml-resume-library-1.5.1/build.xml	2011-03-16 18:39:06.000000000 +0100
+@@ -63,7 +63,7 @@
+     <pathelement path="${build.dir}"/>
+   </path>
+ 
+-  <property name="saxon.home" value="/usr/local/share/java/saxon"/>
++  <property name="saxon.home" value="/usr/share/java"/>
+   <path id="saxon.classpath">
+     <pathelement location="${saxon.home}/saxon.jar"/>
+     <pathelement location="${saxon.home}/saxon-fop.jar"/>

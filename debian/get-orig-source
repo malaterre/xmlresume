@@ -21,6 +21,17 @@ fi
 
 svn export --quiet https://xmlresume.svn.sourceforge.net/svnroot/xmlresume/tags/release-${UVERSION}/resume ${FOLDER}
 
+rm -f *.py
+# http://sourceforge.net/projects/pyxml/files/pyxml/0.8.4/PyXML-0.8.4.tar.gz/download
+wget http://pyxml.cvs.sourceforge.net/viewvc/pyxml/xml/xml/utils/characters.py
+wget http://pyxml.cvs.sourceforge.net/viewvc/pyxml/xml/xml/parsers/xmlproc/xmldtd.py
+wget http://pyxml.cvs.sourceforge.net/viewvc/pyxml/xml/xml/parsers/xmlproc/utils.py
+wget http://pyxml.cvs.sourceforge.net/viewvc/pyxml/xml/xml/parsers/xmlproc/xmlutils.py
+wget http://pyxml.cvs.sourceforge.net/viewvc/pyxml/xml/xml/parsers/xmlproc/errors.py
+wget http://pyxml.cvs.sourceforge.net/viewvc/pyxml/xml/xml/parsers/xmlproc/charconv.py
+wget http://pyxml.cvs.sourceforge.net/viewvc/pyxml/xml/xml/parsers/xmlproc/xmlapp.py
+wget http://pyxml.cvs.sourceforge.net/viewvc/pyxml/xml/xml/parsers/xmlproc/dtdparser.py
+mv *.py ${FOLDER}/src/doc/manual/scripts
+
 GZIP="--best --no-name" tar czf ${TARFILE} ${FOLDER}
 rm -rf ${FOLDER}
-

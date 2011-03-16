@@ -1,0 +1,22 @@
+--- xml-resume-library-1.5.1/src/doc/manual/scripts/dtddoc.py	2002-04-30 02:34:42.000000000 +0200
++++ old/src/doc/manual/scripts/dtddoc.py	2011-03-16 18:15:33.000000000 +0100
+@@ -1,6 +1,7 @@
+ #!/usr/bin/python 
+ 
+-from xml.parsers.xmlproc import dtdparser,xmldtd,utils
++#from xml.parsers.xmlproc 
++import dtdparser,xmldtd,utils
+ 
+ import sys
+ import os
+--- xml-resume-library-1.5.1/src/doc/manual/scripts/xmlutils.py	2011-03-16 18:25:30.000000000 +0100
++++ old/src/doc/manual/scripts/xmlutils.py	2011-03-16 18:18:04.000000000 +0100
+@@ -874,7 +875,7 @@
+ reg_enc_name=re.compile("[A-Za-z][-A-Za-z0-9._]*")
+ reg_std_alone=re.compile("yes|no")
+ if using_unicode:
+-    from xml.utils import characters
++    import characters
+     reg_name = characters.re_Name()
+     reg_names = characters.re_Names()
+     reg_nmtoken = characters.re_Nmtoken()
