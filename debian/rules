@@ -20,4 +20,5 @@ binary-post-install/xml-resume-library::
 		w3m -dump changelog.html | gzip -9 > changelog.gz; rm changelog.html )
 
 get-orig-source:
-	uscan --verbose --force-download --repack
+	#uscan --verbose --force-download --repack
+	./debian/get-orig-source

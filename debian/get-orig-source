@@ -1,0 +1,26 @@
+#!/bin/sh
+
+set -ex
+
+PACKAGE=xml-resume-library
+
+VERSION=${VERSION:-$2}
+TARFILE=${TARFILE:-$3}
+
+if [ -z ${VERSION}]; then
+VERSION=`dpkg-parsechangelog | sed -n -e 's/^Version: \(.*\)-[^-]*$/\1/p'`
+fi
+UVERSION=1_5_1
+
+REVISION=`echo $VERSION | sed -e 's/^.*svn//g'`
+FOLDER=${PACKAGE}-${VERSION}
+
+if [ -z ${TARFILE}]; then
+TARFILE=${PACKAGE}_${VERSION}.orig.tar.gz
+fi
+
+svn export --quiet https://xmlresume.svn.sourceforge.net/svnroot/xmlresume/tags/release-${UVERSION} ${FOLDER}
+
+GZIP="--best --no-name" tar czf ${TARFILE} ${FOLDER}
+rm -rf ${FOLDER}
+
