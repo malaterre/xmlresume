@@ -18,3 +18,6 @@ binary-post-install/xml-resume-library::
 	(cd debian/xml-resume-library/usr/share/doc/xml-resume-library; \
 		ln -s html/changelog/index.html changelog.html; \
 		w3m -dump changelog.html | gzip -9 > changelog.gz; rm changelog.html )
+
+get-orig-source:
+	uscan --verbose --force-download --repack
