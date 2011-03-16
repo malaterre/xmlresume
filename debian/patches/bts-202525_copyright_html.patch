@@ -1,0 +1,35 @@
+--- xml-resume-library/css/compact.css	2006-07-08 20:56:07.000000000 +0200
++++ xml-resume-library/css/compact.css	2006-07-08 21:01:02.000000000 +0200
+@@ -45,7 +45,7 @@
+ .awardTitle { font-weight: bold }
+ .bookTitle { font-style: italic }
+ .citation { font-style: italic }
+-.copyright { font-size: 75% }
++.copyright { margin-left: -.8cm; margin-top: 0.15cm; font-size: 75% }
+ li.degree { margin-bottom: 0.2cm; }
+ .degreeTitle { font-weight: bold }
+ .employer { font-style: italic }
+
+--- xml-resume-library/css/gray.css	2006-07-08 20:56:07.000000000 +0200
++++ xml-resume-library/css/gray.css	2006-07-08 21:04:08.000000000 +0200
+@@ -32,7 +32,7 @@
+ .bookTitle { font-style: italic }
+ .citation { font-style: italic }
+ .clearanceLevel { font-weight: bold }
+-.copyright { font-size: 75% }
++.copyright { margin-left: -20pt; margin-top: 0.5em; font-size: 75% }
+ li.degree { margin-bottom: 0.5em; }
+ .degreeTitle { font-weight: bold }
+ .employer { font-style: italic }
+
+--- xml-resume-library/css/blueorange.css	2006-07-08 20:56:07.000000000 +0200
++++ xml-resume-library/css/blueorange.css	2006-07-08 21:04:50.000000000 +0200
+@@ -47,7 +47,7 @@
+ .bookTitle { font-style: italic }
+ .citation { font-style: italic }
+ .clearanceLevel { font-weight: bold }
+-.copyright { font-size: 75% }
++.copyright { margin-left: -20pt; margin-top: 0.5em; font-size: 75% }
+ li.degree { margin-bottom: 0.5em; }
+ .degreeTitle { font-weight: bold }
+ .employer { font-style: italic }

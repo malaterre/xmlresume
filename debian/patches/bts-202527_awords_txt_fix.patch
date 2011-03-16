@@ -1,0 +1,10 @@
+--- xml-resume-library/xsl/format/text.xsl	2003-12-03 22:56:36.000000000 -0800
++++ xml-resume-library/xsl/format/text.xsl	2003-12-03 22:54:51.000000000 -0800
+@@ -994,6 +994,7 @@ In general, each block is responsible fo
+         </xsl:apply-templates>
+       </xsl:with-param>
+     </xsl:call-template>
++    <xsl:call-template name="NewLine"/>
+   </xsl:template>
+ 
+   <!-- Format the misc info -->

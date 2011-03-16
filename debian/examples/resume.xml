@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- resume.xml Copyright © 2002 Colin Walters <walters@verbum.org> -->
+<!DOCTYPE resume PUBLIC "-//Sean Kelly//DTD Resume 1.5.1//EN"
+  "/usr/share/sgml/xml-resume-library/dtd/resume.dtd">
+
+<resume>
+  <header>
+    <name>
+      <firstname>Colin</firstname>
+      <surname>Walters</surname>
+    </name>
+    <address>
+      <street>144 W. Lane Ave Apt B2</street>
+      <city>Columbus</city>
+      <state>OH</state>
+      <zip>43201</zip>
+    </address>
+    <contact>
+      <phone>614.893.8049</phone>
+      <email>walters@verbum.org</email>
+      <url>http://web.verbum.org/~walters/</url>
+    </contact>
+  </header>
+
+  <objective>
+    <para>To advance the state of non-proprietary software in a
+dynamic and interesting working environment.
+    </para>
+  </objective>
+
+  <history>
+    <job>
+      <jobtitle>Grader, CIS 756: Compiler Design and Implementation</jobtitle>
+      <employer>Ohio State University, Computer Science Department</employer>
+      <period>
+	<from>
+	  <date>
+	    <month>August</month>
+	    <year>2001</year>
+	  </date>
+	</from>
+	<to>
+	  <date>
+	    <month>December</month>
+	    <year>2001</year>
+	  </date>
+	</to>
+      </period>
+      <description>
+	<para>Reviewed labs and homework assignments for CIS 756, a
+	course on the design and implementation of compilers.  Duties
+	included interacting with students to assist in problem
+	solving, and teaching class during the absence of the professor.</para>
+      </description>
+    </job>
+    <job>
+      <jobtitle>Volunteer Debian Developer</jobtitle>
+      <employer>The Debian Project</employer>
+      <period>
+	<from>
+	  <date>
+	    <month>September</month>
+	    <year>2001</year>
+	  </date>
+	</from>
+	<to>
+	 <present/>
+	</to>
+      </period>
+      <description>
+	<para>Volunteer developer for the Universal Operating System
+	(<url>http://www.debian.org</url>).  Work has included
+	numerous patches to fix bugs ranging from build failures to
+	Debian policy violations, a number of contributions to
+	Debian's packaging of the GNOME desktop environment, as well
+	as work on the PowerPC port, including the addition of 2.4
+	PowerPC Linux kernel support for the Debian installer.</para>
+	<para>I currently maintain Debian packages of "calc", the GNU
+	Emacs Calculator, the "gnome-system-monitor" process viewing
+	application, "crack-attack", a multiplayer OpenGL puzzle game,
+	and "gpmudmon-applet", a battery monitor applet for the GNOME
+	desktop.</para>
+      </description>
+    </job>
+
+    <job>
+      <jobtitle>Student Programmer</jobtitle>
+      <employer>Ohio State University, Computer Science Department</employer>
+      <period>
+	<from>
+	  <date>
+	    <month>August</month>
+	    <year>2000</year>
+	  </date>
+	</from>
+	<to>
+	  <date>
+	    <month>September</month>
+	    <year>2001</year>
+	  </date>
+	</to>
+      </period>
+      <description>
+	<para>Developed a client/server electronic timesheet in the
+Java programming language, using RMI and Swing.  Assisted with system
+administration tasks.
+	</para>
+      </description>
+    </job>
+    <job>
+      <jobtitle>Treasurer</jobtitle>
+      <employer>The OSU Open Source Club</employer>
+      <period>
+	<from>
+	  <date>
+	    <month>August</month>
+	    <year>2000</year>
+	  </date>
+	</from>
+	<to>
+	 <present/>
+	</to>
+      </period>
+      <description>
+	<para>Worked as official treasurer for the OSU Open Source
+	Club (<url>http://freedom.cis.ohio-state.edu</url>).  Duties
+	included managing funds, as well as system administration and
+	various leadership roles.</para>
+	<para>I implemented the initial version
+	of the club's current workstation lab, which entailed
+	installing various operating systems, from Debian GNU/Hurd to
+	NetBSD and Red Hat GNU/Linux, and integrating them into our
+	LDAP setup using PAM.</para>
+	<para>Also, I gave a number of talks for the
+	club, including one on programming in Emacs Lisp, and one on
+	programming in GTK+. </para>
+      </description>
+    </job>
+
+
+    <job>
+      <jobtitle>Computer Lab Consultant</jobtitle>
+      <employer>Ohio State University, HFEC Department</employer>
+      <period>
+	<from>
+	  <date>
+	    <month>August</month>
+	    <year>1998</year>
+	  </date>
+	</from>
+	<to>
+	  <date>
+	    <month>September</month>
+	    <year>1999</year>
+	  </date>
+	</to>
+      </period>
+      <description>
+	<para>Maintained a computer lab consisting of a diverse number
+	of operating systems.  Assisted computer lab users with
+	difficulties with the lab software and hardware.
+	</para>
+      </description>
+    </job>
+  </history>
+
+  <academics>
+    <degrees>
+      <degree>
+	<level>Batchelor of Science</level>
+	<major>Computer and Information Science</major>
+	<date>
+	  <month>June</month>
+	  <year>2002</year>
+	</date>
+	<institution>The Ohio State University</institution>
+      </degree>
+    </degrees>
+  </academics>
+
+  <skillarea>
+    <title>Special Skills</title>
+    <skillset>
+      <skill>Strong experience in the ANSI C, Common Lisp, Java,
+	Scheme (Guile), Emacs Lisp, and Perl programming languages.
+	Familiarity with the Objective Caml, TeX, Standard ML,
+	LaTeX, POSIX sh, METAFONT, and C++ programming languages.
+      </skill>
+      <skill>Experience with major free software packages such as
+	GNU Emacs, GNOME, PostgreSQL, and the GIMP.
+      </skill>
+    </skillset>
+  </skillarea>
+    
+  <copyright>
+    <year>2002</year>
+    <name>
+      <firstname>Colin</firstname>
+      <surname>Walters</surname>
+    </name>
+    <legalnotice>
+      <para>All rights reserved.  This document may be copied and
+      redistributed freely, but modification is allowed only if the
+      resulting document does not purport to be the canonical résumé
+      of the same Colin Walters who authored the original version of
+      this document.</para>
+    </legalnotice>
+  </copyright>
+</resume>
+
+<!--
+Local Variables:
+compile-command: "SP_CHARSET_FIXED=YES SP_ENCODING=XML nsgmls -wxml -mdeclaration/xml.soc -gues resume.xml"
+End:
+-->

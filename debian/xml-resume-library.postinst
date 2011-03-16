@@ -1,0 +1,23 @@
+#!/bin/bash
+# -*- coding: utf-8 -*-
+# Copyright © 2002 Colin Walters <walters@debian.org>
+# xml-resume-library postinst by Colin Walters <walters@debian.org>;
+# derived from docbook-xml postinst by Adam Di Carlo <aph@debian.org>
+set -e
+
+PACKAGE=xml-resume-library
+CENTRALCAT=/etc/sgml/${PACKAGE}.cat
+DTDDIR=/usr/share/sgml/xml-resume-library/dtd
+
+if [ "$1" = configure ]; then
+    # remove the old catalog
+    install-sgmlcatalog --quiet --remove ${PACKAGE}
+
+    update-catalog --quiet --add ${CENTRALCAT} ${DTDDIR}/resume.cat
+    update-catalog --quiet --add --super ${CENTRALCAT}
+fi
+
+# automatically generated debhelper commands
+#DEBHELPER#
+
+exit 0

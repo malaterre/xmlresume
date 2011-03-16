@@ -1,0 +1,22 @@
+#!/bin/bash
+# -*- coding: utf-8 -*-
+# Copyright © 2002 Colin Walters <walters@debian.org>
+# xml-resume-library prerm by Colin Walters <walters@debian.org>;
+# derived from docbook-xml prerm by Adam Di Carlo <aph@debian.org>
+
+PACKAGE=xml-resume-library
+CENTRALCAT=/etc/sgml/${PACKAGE}.cat
+
+set -e
+
+if [ "$1" = remove ]; then
+    update-catalog --quiet --remove --super ${CENTRALCAT}
+elif [ "$1" = purge ]; then
+    rm -f ${CENTRALCAT} ${CENTRALCAT}.old
+    rm -rf /etc/sgml/${PACKAGE}
+fi
+
+# automatically generated debhelper commands
+#DEBHELPER#
+
+exit 0

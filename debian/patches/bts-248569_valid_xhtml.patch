@@ -1,0 +1,23 @@
+--- xsl/format/html.xsl	2002-11-27 21:38:35.000000000 -0500
++++ xsl/format/html.xsl	2004-05-12 01:21:28.000000000 -0400
+@@ -34,9 +34,9 @@
+ <xsl:stylesheet xmlns:r="http://xmlresume.sourceforge.net/resume/0.0" 
+  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  version="1.0" 
+  exclude-result-prefixes="r">
+-  <xsl:output method="html" omit-xml-declaration="yes" indent="no" encoding="UTF-8" 
++  <xsl:output method="xml" omit-xml-declaration="yes" indent="no" encoding="UTF-8" 
+    doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" 
+-   doctype-system="http://www.w3.org/TR/xhtml1/DTD/strict.dtd"/>
++   doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
+    
+   <xsl:strip-space elements="*"/>
+   <xsl:include href="../params.xsl"/>
+@@ -60,7 +60,7 @@
+         </title>
+         <xsl:choose>
+           <xsl:when test="$css.embed = 1">
+-            <style>
++            <style type="text/css">
+               <xsl:value-of select="document($css.href)"/>
+             </style>
+           </xsl:when>

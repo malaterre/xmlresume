@@ -1,0 +1,26 @@
+Source: xml-resume-library
+Section: text
+Priority: optional
+Maintainer: Sandro Tosi <matrixhasu@gmail.com>
+Build-Depends-Indep: w3m, sgml-data
+Build-Depends: cdbs, debhelper (>= 5.0.0)
+Standards-Version: 3.7.3
+Homepage: http://xmlresume.sourceforge.net
+
+Package: xml-resume-library
+Architecture: all
+Depends: sgml-data (>= 1.9.1)
+Recommends: xsltproc | xalan | sablotron, xmlto
+Suggests: www-browser, pdf-viewer, java2-runtime
+Description: A set of tools for writing a resume in XML
+ The XML Resume Library is an XML and XSL based system for marking up,
+ adding metadata to, and formatting resumes and curricula vitae.
+ .
+ It consists of these components:
+    * An XML Document Type Definition (DTD) for describing resumes.
+    * Three XSL stylesheets to transform an XML resume into:
+          * Web-ready HTML,
+          * Print-ready PDF, or
+          * Plain, unformatted text
+ .
+

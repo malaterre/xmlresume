@@ -1,0 +1,11 @@
+--- xml-resume-library/xsl/format/fo.xsl  2003-07-24 15:00:22.000000000 -0400
++++ xml-resume-library/xsl/format/fo.xsl  2003-07-24 15:02:24.000000000 -0400
+@@ -395,7 +395,7 @@
+
+   <!-- Format a single job. -->
+   <xsl:template match="r:job">
+-    <fo:block>
++    <fo:block space-after="{$para.break.space}">
+       <fo:block space-after="{$half.space}" keep-with-next="always">
+         <fo:block
+             keep-with-next="always"

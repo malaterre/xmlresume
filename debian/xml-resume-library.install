@@ -1,0 +1,8 @@
+dtd/resume.dtd usr/share/sgml/xml-resume-library/dtd/
+xsl/* usr/share/sgml/xml-resume-library/xsl/
+css/* usr/share/sgml/xml-resume-library/css/
+doc/* usr/share/doc/xml-resume-library/html/
+examples/* usr/share/doc/xml-resume-library/examples/
+java/xmlresume-filter.jar usr/share/java/
+debian/examples/* usr/share/doc/xml-resume-library/debian-examples/
+

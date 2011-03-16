@@ -1,0 +1,6 @@
+# Compulsory line, this is a version 3 file
+version=3
+
+# Find new files on sourceforge
+http://sf.net/xmlresume/resume-(\d+)_(\d+)_(\d+)\.tgz
+

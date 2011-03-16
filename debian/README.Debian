@@ -1,0 +1,26 @@
+Comments on using this package:
+
+* You'll really need an XSL processor.
+I've been able to use xsltproc for this purpose, and it works just
+fine.  Also, recent GCJ snapshots (not yet in Debian) are supposedly
+able to compile and run Xalan.
+
+* PDF output requires a FO processor.  There is good news
+on this front!  Very recently, the "passivetex" package was added to
+Debian.  Now, with that and "xmlto", you can convert .fo files into
+.pdf, without using non-free Sun Java implementations!  See
+/usr/share/doc/xml-resume-library/debian-examples/.
+
+* Verifying your resume with nsgmls:
+Run nsgmls like this:
+
+SP_CHARSET_FIXED=YES SP_ENCODING=XML nsgmls -wxml -mdeclaration/xml.soc -gues resume.xml
+
+(Thanks to Tollef Fog Heen <tfheen@debian.org> for that tip)
+
+ -- Colin Walters <walters@debian.org>, Mon Oct 22 03:23:31 EDT 2001
+
+Local Variables:
+mode: outline
+coding: utf-8
+End:

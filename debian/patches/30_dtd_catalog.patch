@@ -1,0 +1,14 @@
+--- resume-1_4_2/dtd/catalog	Sun Jun 16 02:32:36 2002
++++ resume-1_4_2.new/dtd/catalog	Tue Jun 18 23:39:41 2002
+@@ -34,11 +34,3 @@
+   -- The XML Resume Library, an XML DTD (and a schema some day...) --
+ 
+ PUBLIC "-//Sean Kelly//DTD Resume 1.5.1//EN" "resume.dtd"
+-
+-  -- ISO entity sets in XML format --
+-
+-PUBLIC "ISO 8879:1986//ENTITIES Added Latin 1//EN" "iso-lat1.ent"
+-
+-  -- SGML Declaration --
+-
+-SGMLDECL "resume.dcl"

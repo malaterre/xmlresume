@@ -1,0 +1,11 @@
+--- resume-1_4_2/dtd/resume.dtd	Fri May 24 15:51:24 2002
++++ resume-1_4_2.new/dtd/resume.dtd	Thu May 30 22:29:35 2002
+@@ -41,7 +41,7 @@
+ <![%ISOlat1.module;[
+ <!ENTITY % ISOlat1 PUBLIC
+ "ISO 8879:1986//ENTITIES Added Latin 1//EN//XML"
+-"iso-lat1.ent">
++"/usr/share/sgml/entities/xml-iso-entities-8879.1986/ISOlat1.ent">
+ %ISOlat1;
+ <!--end of ISOlat1.module-->]]>
+ 

@@ -1,0 +1,30 @@
+Subject: Bug#179478: fo.xsl does not format european address correctly
+Date: Sun, 2 Feb 2003 17:28:00 +0100
+From: Guillaume Morin <gemorin@debian.org>
+To: Debian Bug Tracking System <submit@bugs.debian.org>
+Message-ID: <20030202162800.GA2193@siri>
+
+According to
+http://xmlresume.sourceforge.net/user-guide/param.address.format.html,
+european address should be formatted as 
+<street>
+<street2>
+<suburb | ward>
+<zip | postalCode> <city>
+
+But since fo.xsl puts the postalcode and the city in different 
+<fo:block>, they are displayed on different line.
+
+This patch fixes the problem :
+
+--- xml-resume-library/xsl/format/fo.xsl~      2003-02-02 17:00:04.000000000 +0100
++++ xml-resume-library/xsl/format/fo.xsl      2003-02-02 17:18:59.000000000 +0100
+@@ -225,7 +225,7 @@
+         <xsl:if test="string-length($PostCode) &gt; 0">
+           <xsl:value-of select="$PostCode"/><xsl:text> </xsl:text>
+         </xsl:if>
+-	</fo:block><fo:block>
++	<!-- </fo:block><fo:block> -->
+         <xsl:apply-templates select="r:city"/>
+       </fo:block>
+         <xsl:if test="string-length($AdminDivision) &gt; 0">

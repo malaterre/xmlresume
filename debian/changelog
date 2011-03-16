@@ -1,0 +1,295 @@
+xml-resume-library (1.5.1-9) unstable; urgency=low
+
+  * debian/control
+    - removed reccomendation on passivetex since it is no longer available
+  * debian/copyright
+    - fixed a typo in copyright notice
+  * debian/xml-resume-library.doc-base
+    - changed Section to Text
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Sat, 08 Mar 2008 16:41:28 +0100
+
+xml-resume-library (1.5.1-8) unstable; urgency=low
+
+  * debian/patches/bts-213563.patch
+    - added to avoid direct upstream code modification (introduced in Steve's
+      NMU)
+  * debian/xml-resume-library.install
+    - removed installation of debian/overrides
+  * debian/overrides
+    - removed
+  * debian/xml-resume-library.doc-base
+    - removed new lines in Abstract field
+  * debian/control
+    - Recommends all on one line
+    - bump build dep on debhelper to >=5
+  * debian/compat
+    - bump to 5
+  * debian/copyright
+    - separation of copyright and license
+    - upstream author, copyright and license indented with 4 spaces
+  * debian/patches/bts-179476_fr_xsl_comment.patch
+    - added, restoring and renaming debian/patches/fr-xsl-comment.patch;
+      regression introduced in Steve's NMU, patch deleted (Closes: #459939)
+  * debian/patches/bts-416217_fix_examples_makefile.patch
+    - examples makefile uses local xsl template; thanks to Philippe Coval for
+      the patch (Closes: #416217)
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Sat, 26 Jan 2008 17:58:15 +0100
+
+xml-resume-library (1.5.1-7) unstable; urgency=low
+
+  * Non-maintainer upload, with permission from the maintainer.
+    - Bumped standards version to 3.7.3
+      - Moved Homepage: field into debian/control
+    - Dropped the recommendation on 'fop' as it is in contrib.
+      (Closes: #452477)
+    - Updated the Debian example to work with fop.
+      (Closes: #415372)
+    - Register the documentation via doc-base.
+      (Closes: #144642)
+    - Updated XSL files: uk.xsl, es.xsl, fr.xsl, nl.xsl
+      (Closes: #213563)
+
+ -- Steve Kemp <skx@debian.org>  Wed,  5 Dec 2007 17:28:17 +0000
+
+xml-resume-library (1.5.1-6) unstable; urgency=low
+
+  * debian/control
+    - removed transformiix, saxon-catalog since are no more available
+    - renamed libfop-java to fop since it "Replaces: libfop-java"
+  * debian/patches/bts-202734_fo_jobs_space.patch
+    - jobs are too close to each other in FO output (Closes: #202734)
+  * debian/rules
+    - added inclusion of simple-patchsys.mk : now we are _really_ using cdbs
+      (previous the code was patched and debian/patches/* were ignored)
+  * debian/patches/bts-202525_copyright_html.patch
+    - Improper html formatting of copyright/lastupdate fields (Closes:
+    #202525)
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Sat,  8 Jul 2006 21:07:40 +0200
+
+xml-resume-library (1.5.1-5) unstable; urgency=low
+
+  * debian/patches/bts-248569_valid_xhtml.patch
+    - HTML output stylesheet generates invalid XHTML (Closes: #248569)
+  * debian/control
+    - Upgrade to Debian Policy 3.7.2: no changes required
+  * debian/copyright
+    - Changed upstream email
+  * debian/watch
+    - Included watch-file
+  * debian/patches/bts-202527_awords_txt_fix.patch
+    - Bad text formatting of Awards section (Closes: #202527)
+  * debian/examples/Makefile
+    - some suggestions about debian patches ( exemples Makefile ) (Closes:
+      #232908)
+    - resume variable now lowercase and ready to be passed via commandline
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Sun,  7 May 2006 17:17:19 +0200
+
+xml-resume-library (1.5.1-4) unstable; urgency=low
+
+  * debian/control:
+    - New maintainer. (Closes: #361013)
+    - Upgrade to Debian Policy 3.7.0
+    - should Depends on available XSL and XSL-FO processors (Closes:
+      #206374)
+    - Added homepage
+    - Moved debhelper and cdbs to Build-Depends
+    - Update dependency against debhelper >= 4.1.0 (linda clean)
+  * debian/compat
+    - Added due to upgrade to 3.7.0 Debian Policy
+  * debian/rules
+    - Package lintian clean removing changelog.html
+  * debian/xml-resume-library.install
+    - Wrong name for jar file (Closes: #205956)
+
+ -- Sandro Tosi <matrixhasu@gmail.com>  Mon,  1 May 2006 22:43:25 +0200
+
+xml-resume-library (1.5.1-3) unstable; urgency=low
+
+  * debian/control:
+    - Bump Standards-Version: 3.5.10, no changes required.
+    - Build-Depend on cdbs.
+    - Depend on a recent sgml-data (Closes: #175479).
+  * debian/rules:
+    - Convert to cdbs.
+    - Make link for jar file, per java policy.
+  * debian/rocks:
+    - Removed.
+  * debian/xml-resume-library.install:
+    - Install jar file (Closes: #186757).
+  
+ -- Colin Walters <walters@debian.org>  Sun, 25 May 2003 05:04:46 -0400
+
+xml-resume-library (1.5.1-2) unstable; urgency=medium
+
+  * The "Yes, I wish this packages' upstream didn't periodically disappear
+    for long periods of time and ignore patches" release.
+  * debian/control:
+    - Update to Standards-Version: 3.5.9; no changes required.
+  * debian/patches/prettify-postalcode.patch:
+    - New patch from to format postal codes better (Closes: #179478).
+  * debian/patches/fr-xsl-comment.patch:
+    - New patch to remove naughty ISO-8859-1 from comment (Closes: #179476).
+  * debian/rules:
+    - Update to latest version of Colin's Build System.
+
+ -- Colin Walters <walters@debian.org>  Fri,  4 Apr 2003 22:16:16 -0500
+
+xml-resume-library (1.5.1-1) unstable; urgency=low
+
+  * New upstream version (Closes: #173630).
+  * debian/control:
+    - Standards-Version: 3.5.8.
+  * debian/rules:
+    - Update to latest version of Colin's Build System.
+  * debian/rocks:
+    - Make text version of upstream changelog changelog.gz instead of
+    changelog.txt.gz.  Thanks lintian.
+  * debian/patches/30_dtd_catalog.patch:
+    - Update.
+  * debian/patches/prettify-text-xsl.patch:
+    - New patch, courtesy of James LewisMoss <dres@lewismoss.net>, and
+    forward ported to 1.5.1 by me (Closes: #174482).
+  * debian/examples/resume.xml:
+    - Update to 1.5.1.
+  * debian/postinst, debian/prerm:
+    - Rename to debian/xml-resume-library.postinst,
+    debian/xml-resume-library.prerm, respectively.
+    - Add copyright statement.
+
+ -- Colin Walters <walters@debian.org>  Fri,  3 Jan 2003 15:19:58 -0500
+
+xml-resume-library (1.5.0-2) unstable; urgency=low
+
+  * debian/rocks:
+    - Update to latest version of Colin's Build System.
+
+ -- Colin Walters <walters@debian.org>  Thu, 14 Nov 2002 19:54:35 -0500
+
+xml-resume-library (1.5.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - Dump DBS in favor of my own version of dpatch.
+    - Use debhelper 4 and dh_install.
+  * debian/rules:
+    - Significantly clean up.
+    - Install HTML docs in html/ subdirectory.
+
+ -- Colin Walters <walters@debian.org>  Fri,  8 Nov 2002 16:31:52 -0500
+
+xml-resume-library (1.4.2-4) unstable; urgency=low
+
+  * debian/control:
+    - Remove recommends on contrib crap.  Now just recommend passivetex
+      and xmlto.  No more non-free Sun Java! 
+  * debian/examples/Makefile:
+    - Update to use xmlto.
+  * debian/examples/resume.xml:
+    - New upstream version. :)
+
+ -- Colin Walters <walters@debian.org>  Thu,  5 Sep 2002 22:37:54 -0400
+
+xml-resume-library (1.4.2-3) unstable; urgency=low
+
+  * debian/control:
+    - Actually do what is in the last changelog entry :)
+
+ -- Colin Walters <walters@debian.org>  Sat, 17 Aug 2002 00:18:29 -0400
+
+xml-resume-library (1.4.2-2) unstable; urgency=low
+
+  * debian/control:
+    - Change Suggests on "lib-fop-java" to "libfop-java"
+      (Closes: #153865).
+
+ -- Colin Walters <walters@debian.org>  Fri, 16 Aug 2002 23:55:44 -0400
+
+xml-resume-library (1.4.2-1) unstable; urgency=low
+
+  * New upstream version.
+
+ -- Colin Walters <walters@debian.org>  Fri, 19 Jul 2002 19:12:23 -0400
+
+xml-resume-library (1.4.1-1) unstable; urgency=low
+
+  * New upstream version.
+  * debian/examples/Makefile:
+    - Try to handle fop better.
+  * debian/examples/resume.xml:
+    - Update.
+  * debian/README.Debian:
+    - Add some instructions for installing FOP.
+
+ -- Colin Walters <walters@debian.org>  Tue, 18 Jun 2002 22:55:15 -0400
+
+xml-resume-library (1.4.0-1) unstable; urgency=medium
+
+  * New upstream version.
+  * debian/control:
+    - Build-Depend on sgml-data, not sgml-base (Closes: #146912)
+    - Build-Depend on dbs.
+  * debian/rules:
+    - Use dbs.
+
+ -- Colin Walters <walters@debian.org>  Thu, 30 May 2002 21:49:43 -0400
+
+xml-resume-library (1.3.2-5) unstable; urgency=high
+
+  * dtd/catalog:
+    - Remove SGMLDECL for XML (Closes: #145607).
+  * dtd/resume.dtd:
+    - Explicitly reference ISOlat1.ent (Closes: #145959).
+
+ -- Colin Walters <walters@debian.org>  Thu,  7 May 2002 18:10:32 -0400
+
+xml-resume-library (1.3.2-4) unstable; urgency=high
+
+  * debian/rules:
+    - Install upstream "catalog" file as resume.cat.
+  * dtd/catalog:
+    - Remove reference to iso-lat1.ent.
+  * dtd/resume.dtd:
+    - Use Debian's ISOlat1.ent.
+
+ -- Colin Walters <walters@debian.org>  Fri, 12 Apr 2002 16:47:44 -0400
+
+xml-resume-library (1.3.2-3) unstable; urgency=high
+
+  * debian/rules:
+    - Install iso-lat1.ent (Closes: #135579)
+
+ -- Colin Walters <walters@debian.org>  Thu,  4 Apr 2002 18:25:11 -0500
+
+xml-resume-library (1.3.2-2) unstable; urgency=low
+
+  * debian/examples/{resume.xml,Makefile}
+    - New.
+  * debian/rules, debian/dirs:
+    - Install them.
+  * debian/README.Debian:
+    - Reorganize.
+
+ -- Colin Walters <walters@debian.org>  Wed,  3 Apr 2002 03:02:24 -0500
+
+xml-resume-library (1.3.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #116612)
+
+ -- Colin Walters <walters@debian.org>  Sun, 17 Feb 2002 22:48:26 -0500
+
+xml-resume-library (1.2.4-2) unstable; urgency=low
+
+  * Add catalog.
+  * Add maintainer scripts.
+
+ -- Colin Walters <walters@debian.org>  Mon, 22 Oct 2001 03:26:35 -0400
+
+xml-resume-library (1.2.4-1) unstable; urgency=low
+
+  * Initial version.
+
+ -- Colin Walters <walters@verbum.org>  Thu,  6 Sep 2001 00:38:02 -0400

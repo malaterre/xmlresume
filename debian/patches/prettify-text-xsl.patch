@@ -1,0 +1,25 @@
+--- xml-resume-library/xsl/format/text.xsl~	2002-11-27 21:38:36.000000000 -0500
++++ xml-resume-library/xsl/format/text.xsl	2003-01-03 15:32:04.000000000 -0500
+@@ -416,12 +416,21 @@
+   </xsl:template>
+                 
+   <xsl:template match="r:period">
+-    <xsl:apply-templates select="r:from"/>-<xsl:apply-templates select="r:to"/>
++    <xsl:apply-templates select="r:from"/> - <xsl:apply-templates select="r:to"/>
+     <xsl:if test="parent::r:job">
+       <xsl:call-template name="NewLine"/>
+     </xsl:if>
+   </xsl:template>
+ 
++  <xsl:template match="r:from">
++    <xsl:apply-templates select="r:date"/>
++  </xsl:template>
++
++  <xsl:template match="r:to">
++    <xsl:apply-templates select="r:date"/>
++    <xsl:apply-templates select="r:present"/>
++  </xsl:template>
++
+   <!-- Format a date. -->
+   <xsl:template match="r:date" name="FormatDate">
+     <xsl:if test="r:dayOfMonth">
